@@ -22,3 +22,4 @@ Detects and enriches:
 
 ### 📝To Do
 - Add official support for DnD 5e v4, adding better functionality for attack enrichers
+- Possibly add a way to automate this for the descriptions of an actor's features
