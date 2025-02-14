@@ -5,9 +5,9 @@ on:
     types: [published]
 
 env:
-  PROJECT_URL: "https://github.com/jfelicio/dnd5e-roll-enrichers"
-  LATEST_MANIFEST_URL: "https://github.com/jfelicio/dnd5e-roll-enrichers/releases/latest/download/module.json"
-  RELEASE_MODULE_URL: "https://github.com/jfelicio/dnd5e-roll-enrichers/releases/download/${{ github.event.release.tag_name }}/module.zip"
+  PROJECT_URL: "https://github.com/jofelicio/dnd5e-roll-enrichers"
+  LATEST_MANIFEST_URL: "https://github.com/jofelicio/dnd5e-roll-enrichers/releases/latest/download/module.json"
+  RELEASE_MODULE_URL: "https://github.com/jofelicio/dnd5e-roll-enrichers/releases/download/${{ github.event.release.tag_name }}/module.zip"
 
 jobs:
   build:
