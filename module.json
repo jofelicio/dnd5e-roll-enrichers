@@ -1,0 +1,39 @@
+{
+    "id": "dnd-5e-enricher",
+    "title": "DnD 5e Enricher",
+    "description": "Adds a button to journal entries to automatically detect and enrich dice rolls, skill checks, saving throws, and certain rule references.",
+    "version": "#{VERSION}#",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "12"
+    },
+    "authors": [
+        {
+            "name": "Jorge",
+            "email": "jorge.e.felicio@gmail.com",
+            "url": "https://github.com/jfelicio",
+            "discord": "summorox",
+            "flags": {}
+        }
+    ],
+    "esmodules": [
+        "scripts/enricher.js"
+    ],
+    "relationships": {
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "3.2.0",
+                    "verified": "3.3.1"
+                }
+            }
+        ]
+    },
+    "url": "#{URL}#",
+    "manifest": "#{MANIFEST}#",
+    "download": "#{DOWNLOAD}#",
+    "license": "LICENSE",
+    "readme": "README.md"
+}
