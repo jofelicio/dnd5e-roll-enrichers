@@ -6,6 +6,8 @@
     "compatibility": {
         "minimum": "11",
         "verified": "12"
+        "verified": "12",
+        "maximum": "12"
     },
     "authors": [
         {
@@ -13,7 +15,6 @@
             "email": "jorge.e.felicio@gmail.com",
             "url": "https://github.com/jofelicio",
             "discord": "summorox",
-            "flags": {}
         }
     ],
     "esmodules": [
@@ -26,7 +27,8 @@
                 "type": "system",
                 "compatibility": {
                     "minimum": "3.2.0",
-                    "verified": "3.3.1"
+                    "verified": "3.3.1",
+                    "maximum": "3.9.9"
                 }
             }
         ]
