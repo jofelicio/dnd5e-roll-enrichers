@@ -17,7 +17,7 @@ Detects and enriches:
 1. Open FoundryVTT, go to **Add-on Modules**.
 2. Click `Install Module`.
 3. Paste the manifest URL:
-   https://github.com/jfelicio/dnd5e-roll-enrichers/releases/latest/download/module.json
+   https://github.com/jofelicio/dnd5e-roll-enrichers/releases/latest/download/module.json
 5. Click Install & Enable the module in **Game Settings**.
 
 ### 📝To Do
