@@ -1,19 +1,19 @@
 {
-    "id": "dnd-5e-enricher",
+    "id": "dnd5e-roll-enricher",
     "title": "DnD 5e Enricher",
     "description": "Adds a button to journal entries to automatically detect and enrich dice rolls, skill checks, saving throws, and certain rule references.",
     "version": "#{VERSION}#",
     "compatibility": {
         "minimum": "11",
         "verified": "12",
-        "maximum": "12"
+        "maximum": 12
     },
     "authors": [
         {
             "name": "Jorge",
             "email": "jorge.e.felicio@gmail.com",
             "url": "https://github.com/jofelicio",
-            "discord": "summorox",
+            "discord": "summorox"
         }
     ],
     "esmodules": [
