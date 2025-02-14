@@ -1,6 +1,6 @@
 # DnD5e Roll Enricher
 
-### 📝 Description
+### Description
 This module adds a button in the journal entry headers that automatically detects and enriches (https://github.com/foundryvtt/dnd5e/wiki/Enrichers) dice rolls, skill checks, saving throws, and references in FoundryVTT **DnD5e** journals. Useful for GMs wanting to enhance their notes.
 
 ### 🎲 Features
@@ -12,3 +12,13 @@ Detects and enriches:
 - Damage Rolls: `"5 (1d6+2) fire damage"` → `[[/damage 1d6+2 fire average=true]]`
 - Healing Rolls: `"2d8+5 hit points"` → `[[/damage 2d8+5 healing]]`
 - References: `"Difficult Terrain"` → `"Difficult Terrain (See &Reference[difficult terrain])"`
+
+### 🛠️ Installation
+1. Open FoundryVTT, go to **Add-on Modules**.
+2. Click `Install Module`.
+3. Paste the manifest URL:
+   https://github.com/jfelicio/dnd5e-roll-enrichers/releases/latest/download/module.json
+5. Click Install & Enable the module in **Game Settings**.
+
+### 📝To Do
+- Add official support for DnD 5e v4, adding better functionality for attack enrichers
