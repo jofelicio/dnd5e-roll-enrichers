@@ -10,7 +10,7 @@ Detects and enriches:
 - Attack Rolls: `"+8 to hit"` → `[[/attack 8]]` (DnD 5e v4.2+) or `[[/r 1d20+8]]`(previous DnD 5e versions)
 - Saving Throws: `"DC 14 Dexterity saving throw"` → `[[/save dexterity 14]]`
 - Damage Rolls: `"5 (1d6+2) fire damage"` → `[[/damage 1d6+2 fire average=true]]`
-- Healing Rolls: `"2d8+5 hit points"` → `[[/damage 2d8+5 healing]]`
+- Healing Rolls: `"2d8+5 hit points"` → `[[/heal 2d8+5]]`
 - References: `"Difficult Terrain"` → `"Difficult Terrain (See &Reference[difficult terrain])"`
 
 ### 🛠️ Installation
