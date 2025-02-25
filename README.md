@@ -7,7 +7,7 @@ This is a FoundryVTT module that adds a button in the journal entry headers that
 Detects and enriches:
 - Skill/Ability/Tool Checks: `"DC 15 Wisdom (Perception) check"` → `[[/skill wisdom perception 15]]`
 - Passive Checks: `"passive perception score of 20 or higher"` → `[[/skill perception 20 passive format=long]]`
-- Attack Rolls: `"+8 to hit"` → `[[/r 1d20+8]]` **Note**: Will actually add the attack enricher when updating to 5e v4
+- Attack Rolls: `"+8 to hit"` → `[[/attack 8]]` (DnD 5e v4.2+) or `[[/r 1d20+8]]`(previous DnD 5e versions)
 - Saving Throws: `"DC 14 Dexterity saving throw"` → `[[/save dexterity 14]]`
 - Damage Rolls: `"5 (1d6+2) fire damage"` → `[[/damage 1d6+2 fire average=true]]`
 - Healing Rolls: `"2d8+5 hit points"` → `[[/damage 2d8+5 healing]]`
@@ -21,5 +21,4 @@ Detects and enriches:
 5. Click Install & Enable the module in **Game Settings**.
 
 ### 📝To Do
-- Add official support for DnD 5e v4, adding better functionality for attack enrichers
 - Possibly add a way to automate this for the descriptions of an actor's features
