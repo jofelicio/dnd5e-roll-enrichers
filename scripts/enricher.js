@@ -150,7 +150,7 @@ function updateGroupState(groupCheckbox, childCheckboxes) {
     groupCheckbox.prop({ checked: allChecked, indeterminate: someChecked && !allChecked });
 }
 
-// Optimized enrichment handler
+// Enrichment handler
 const enrichmentHandlers = {
     enrichSkills: enrichSkillChecks,
     enrichAbilities: enrichAbilityChecks,
@@ -350,19 +350,29 @@ function enrichDamageRolls(content) {
  */
 function enrichHealingRolls(content) {
     return content.replace(
-        /(\d+d\d+\s*(?:[+-]\s*\d+)?)\s+(hit points|temporary hit points)/gi,
-        (match, dice, healingType) => {
-            const type = healingType.toLowerCase().includes("temporary") ? "temphp" : "healing";
-            return `[[/damage ${dice.replace(/\s+/g, "")} ${type}]]`; // Remove spaces directly
+        /(\d+d\d+\s*(?:[+-]\s*\d+)?|\d+)\s+(hit points|temporary hit points)/gi,
+        (match, amount, healingType) => {
+            const type = healingType.toLowerCase().includes("temporary") ? "temp" : "";
+            return `[[/healing ${amount.replace(/\s+/g, "")} ${type}]]`; // Remove spaces
         }
     );
 }
 
 /**
- * Enriches attack rolls (e.g., "+6 to hit" or "+ 6 to hit"). Missing DnD v4 implementation.
+ * Enriches attack rolls (e.g., "+6 to hit" or "+ 6 to hit"). 
  */
 function enrichAttackRolls(content) {
-    return content.replace(/\+\s*(\d+)\s*to\s+hit/gi, (match, bonus) => `[[/r 1d20+${bonus}]] to hit`);
+    const version = game.system.version;
+
+    const supportsAttack = foundry.utils.isNewerVersion(version, "4.2.0");
+
+    return content.replace(/\+\s*(\d+)\s*to\s+hit/gi, (match, bonus) => {
+        if (supportsAttack) {
+            return `[[/attack ${bonus}]] to hit`; // DnD 5e v4.2.0+ syntax
+        } else {
+            return `[[/r 1d20+${bonus}]] to hit`; 
+        }
+    });
 }
 
 
@@ -380,7 +390,7 @@ function enrichAwards(content) {
 /**
  * Helper function to enrich references
  * @param {string} content - The journal entry content
- * @param {Object} dataset - The dataset from CONFIG.DND5E or another config source
+ * @param {Object} dataset - The dataset from CONFIG.DND5E
  * @returns {string} - The enriched content
  */
 function enrichReferences(content, dataset) {
