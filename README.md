@@ -3,6 +3,8 @@
 ### Description
 This is a FoundryVTT module that adds a button in the journal entry headers that automatically detects and enriches (https://github.com/foundryvtt/dnd5e/wiki/Enrichers) dice rolls, skill checks, saving throws, and references in FoundryVTT **DnD5e** journals. Useful for GMs wanting to enhance their notes.
 
+**Important Note**: This module is now deprecated and it's functionality has been implemented in a PR to the https://foundryvtt.com/packages/dnd-easy-reference module.
+
 ### 🎲 Features
 Detects and enriches:
 - Skill/Ability/Tool Checks: `"DC 15 Wisdom (Perception) check"` → `[[/skill wisdom perception 15]]`
